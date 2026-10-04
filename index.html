@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Интерактивный тренажёр по статье Attention Is All You Need">
+  <title>Transformer Lab — интерактив по техническому переводу</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Transformer Lab — на главную">
+        <span class="brand-mark">T</span>
+        <span>Transformer Lab</span>
+      </a>
+      <div class="progress-wrap" aria-label="Прогресс">
+        <span id="progressText">0 / 18</span>
+        <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+      </div>
+    </header>
+
+    <main id="app">
+      <section id="startScreen" class="screen hero active">
+        <div class="eyebrow">ТЕХНИЧЕСКИЙ ПЕРЕВОД · MA LEVEL</div>
+        <h1>Насколько внимательно вы прочитали <em>Attention Is All You Need</em>?</h1>
+        <p class="lead">Три раунда проверяют знание терминов, понимание архитектуры Transformer и умение принимать обоснованные переводческие решения.</p>
+        <div class="round-grid">
+          <article><span>01</span><h2>Terminology</h2><p>Термины, определения и эквиваленты</p></article>
+          <article><span>02</span><h2>Reading</h2><p>Архитектура, аргументация и результаты</p></article>
+          <article><span>03</span><h2>Translation</h2><p>Буквализм, трансформации и стиль</p></article>
+        </div>
+        <div class="start-actions">
+          <button id="startBtn" class="primary">Начать тренировку <span>→</span></button>
+          <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noreferrer">Открыть статью ↗</a>
+        </div>
+        <p class="micro">18 заданий · около 15 минут · варианты перемешиваются при каждом прохождении · регистрация не нужна</p>
+      </section>
+
+      <section id="quizScreen" class="screen quiz-screen" aria-live="polite">
+        <div class="quiz-head">
+          <div>
+            <div id="roundLabel" class="eyebrow"></div>
+            <div id="questionType" class="question-type"></div>
+          </div>
+          <div id="scoreChip" class="score-chip">0 баллов</div>
+        </div>
+        <div class="question-card">
+          <div id="questionNumber" class="question-number"></div>
+          <h2 id="questionText"></h2>
+          <p id="questionHint" class="hint"></p>
+          <div id="options" class="options"></div>
+          <div id="feedback" class="feedback" hidden></div>
+          <div class="question-actions">
+            <button id="checkBtn" class="primary" disabled>Проверить</button>
+            <button id="nextBtn" class="primary" hidden>Следующее задание <span>→</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="resultScreen" class="screen result-screen">
+        <div class="eyebrow">РЕЗУЛЬТАТ</div>
+        <div class="result-top">
+          <div>
+            <h1 id="resultTitle"></h1>
+            <p id="resultMessage" class="lead"></p>
+          </div>
+          <div class="score-orbit"><strong id="finalScore"></strong><span>из 18</span></div>
+        </div>
+        <div id="categoryResults" class="category-results"></div>
+        <div class="result-panels">
+          <section>
+            <h2>Что повторить</h2>
+            <div id="reviewList" class="review-list"></div>
+          </section>
+          <section class="legend-panel">
+            <h2>Шкала</h2>
+            <p><strong>16–18</strong> — уверенное владение материалом</p>
+            <p><strong>12–15</strong> — хорошая база, есть точечные пробелы</p>
+            <p><strong>0–11</strong> — стоит вернуться к статье и глоссарию</p>
+          </section>
+        </div>
+        <div class="result-actions">
+          <button id="copyBtn" class="secondary">Скопировать результат</button>
+          <button id="restartBtn" class="primary">Пройти ещё раз</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

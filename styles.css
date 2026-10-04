@@ -1,0 +1,31 @@
+:root {
+  --ink:#142535; --muted:#667784; --paper:#f5f7f8; --white:#fff;
+  --navy:#17324d; --teal:#0aa6a6; --coral:#ef655b; --violet:#7253a5;
+  --line:#dce4e8; --good:#197a5c; --bad:#b83e45; --soft-teal:#e8f7f5;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);min-height:100vh}
+button,a{font:inherit}.shell{max-width:1120px;margin:auto;padding:0 28px 60px}
+.topbar{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--ink);font-weight:800;letter-spacing:-.02em}
+.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--navy);color:white}
+.progress-wrap{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:13px;font-weight:700}
+.progress-track{width:150px;height:7px;border-radius:999px;background:#e1e7ea;overflow:hidden}.progress-bar{height:100%;width:0;background:var(--teal);transition:.35s}
+.screen{display:none}.screen.active{display:block}.hero{padding:72px 0 30px}.eyebrow{font-size:12px;font-weight:900;letter-spacing:.16em;color:var(--teal);margin-bottom:18px}
+h1{font-size:clamp(38px,6vw,72px);letter-spacing:-.055em;line-height:1.02;max-width:900px;margin:0 0 24px}h1 em{color:var(--coral);font-style:normal}
+.lead{font-size:19px;line-height:1.55;color:var(--muted);max-width:760px}.round-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:45px 0 34px}
+.round-grid article{background:var(--white);border:1px solid var(--line);padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(20,37,53,.04)}
+.round-grid article span{color:var(--coral);font-weight:900;font-size:12px}.round-grid h2{font-size:24px;margin:22px 0 8px}.round-grid p{color:var(--muted);margin:0;line-height:1.4}
+.start-actions,.result-actions{display:flex;gap:22px;align-items:center}.start-actions a{color:var(--navy);font-weight:800}.micro{color:#8a989f;font-size:13px;margin-top:18px}
+.primary,.secondary{border:0;border-radius:12px;padding:14px 20px;font-weight:850;cursor:pointer;transition:.2s}.primary{background:var(--navy);color:#fff}.primary:hover{background:#22496c;transform:translateY(-1px)}.primary:disabled{opacity:.35;cursor:not-allowed;transform:none}.secondary{background:#e5ebee;color:var(--navy)}
+.quiz-screen{padding:42px 0}.quiz-head{display:flex;justify-content:space-between;align-items:start;margin-bottom:20px}.question-type{color:var(--muted);font-weight:700}.score-chip{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-weight:850}
+.question-card{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,5vw,54px);box-shadow:0 18px 50px rgba(20,37,53,.06)}
+.question-number{color:var(--coral);font-weight:900;font-size:13px;letter-spacing:.14em}.question-card h2{font-size:clamp(25px,4vw,40px);line-height:1.15;letter-spacing:-.035em;margin:15px 0 8px;max-width:900px}.hint{color:var(--muted);line-height:1.5;margin:0 0 26px}.options{display:grid;gap:12px}
+.option{display:flex;gap:14px;align-items:flex-start;text-align:left;width:100%;padding:17px 18px;border:1.5px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);cursor:pointer;line-height:1.42}.option:hover{border-color:#9eb4c0}.option.selected{border-color:var(--teal);background:var(--soft-teal)}.option.correct{border-color:var(--good);background:#eaf7f1}.option.wrong{border-color:var(--bad);background:#fceded}.option:disabled{cursor:default}.option-key{display:grid;place-items:center;flex:0 0 28px;height:28px;border-radius:8px;background:#edf1f3;font-weight:900;font-size:12px}
+.feedback{margin-top:22px;border-left:4px solid var(--teal);padding:12px 0 12px 16px;line-height:1.55;color:var(--muted)}.feedback strong{color:var(--ink)}.feedback.bad{border-color:var(--coral)}.question-actions{margin-top:26px;display:flex;justify-content:flex-end}
+.result-screen{padding:55px 0}.result-top{display:flex;justify-content:space-between;gap:40px;align-items:center}.result-top h1{font-size:clamp(40px,6vw,66px)}.score-orbit{flex:0 0 170px;height:170px;border-radius:50%;border:14px solid var(--teal);display:grid;place-content:center;text-align:center;background:#fff;box-shadow:0 12px 40px rgba(10,166,166,.12)}.score-orbit strong{font-size:48px;line-height:1}.score-orbit span{color:var(--muted);font-weight:700}
+.category-results{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:38px 0}.category-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}.category-card header{display:flex;justify-content:space-between;font-weight:850}.mini-track{height:8px;background:#e6ebee;border-radius:99px;margin-top:16px;overflow:hidden}.mini-track div{height:100%;background:var(--teal);border-radius:99px}
+.result-panels{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;margin-bottom:28px}.result-panels>section{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}.result-panels h2{margin:0 0 16px}.review-item{padding:13px 0;border-top:1px solid var(--line)}.review-item:first-child{border:0}.review-item strong{display:block;margin-bottom:4px}.review-item span,.legend-panel p{color:var(--muted);line-height:1.45}.legend-panel p{border-top:1px solid var(--line);padding-top:12px}.legend-panel strong{color:var(--ink)}
+@media(max-width:760px){.shell{padding:0 18px 40px}.topbar{height:70px}.progress-track{width:80px}.hero{padding-top:45px}.round-grid,.category-results,.result-panels{grid-template-columns:1fr}.result-top{align-items:flex-start}.score-orbit{width:120px;height:120px;flex-basis:120px;border-width:10px}.score-orbit strong{font-size:34px}.start-actions{align-items:flex-start;flex-direction:column}.question-card{border-radius:18px}.quiz-head{gap:10px}.result-actions{flex-wrap:wrap}}
+@media(max-width:500px){.brand span:last-child{display:none}.result-top{display:block}.score-orbit{margin:25px 0}.progress-wrap{gap:7px}}
